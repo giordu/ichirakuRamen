@@ -6,7 +6,7 @@ Ichiraku Ramen è un diorama interattivo tridimensionale che riproduce un tipico
 ![Ichiraku Ramen ](screenshot_scene.png)
 
 ## Live Demo
-Il progetto è pubblicato e consultabile in tempo reale al seguente indirizzo:
-[Visualizza il Deployment su GitHub Pages](https://giordu.github.io/ichirakuRamen/)
+Il progetto è pubblicato e consultabile in tempo reale al seguente 
+[https://giordu.github.io/ichirakuRamen/]
 
 
