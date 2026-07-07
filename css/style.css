@@ -17,7 +17,7 @@ body, html {
     padding: 15px 25px;
     border-radius: 0px;
     display: flex; align-items: center; gap: 15px;
-    font-family: 'Shippori Mincho', 'Georgia', serif; 
+    font-family: 'Noto Sans JP', sans-serif; 
     opacity: 0; pointer-events: none;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999; 
@@ -28,14 +28,15 @@ body, html {
 .popup-icon { font-size: 2.2rem; color: #a33030; }
 
 .popup-text h3 {
-    margin: 0; font-size: 1.1rem;
-    font-family: 'Yuji Boku', 'Shippori Mincho', serif;
+    margin: 0; font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
     color: #e8e0cc;
     letter-spacing: 1px;
     padding-bottom: 3px;
 }
 
-.popup-text p { margin: 5px 0 0 0; font-size: 0.9rem; color: #bbaaaa; }
+.popup-text p { margin: 5px 0 0 0; font-size: 0.85rem; color: #bbaaaa; }
 
 #music-player {
     position: fixed; bottom: 20px; right: 20px;
@@ -46,7 +47,7 @@ body, html {
     border-radius: 0px;
     padding: 14px 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    font-family: 'Shippori Mincho', 'Georgia', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: #e8e0cc;
     z-index: 999;
     display: flex; flex-direction: column; gap: 10px;
@@ -54,11 +55,13 @@ body, html {
 }
 
 .player-info {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 12px; font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 11px; 
     color: #cc4444; 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding-bottom: 4px; text-align: center;
+    text-transform: uppercase;
 }
 
 .player-controls {
@@ -72,7 +75,7 @@ body, html {
     padding: 6px 14px;
     border-radius: 0px;
     cursor: pointer;
-    font-family: 'Shippori Mincho', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     transition: all 0.2s ease;
 }
@@ -97,7 +100,7 @@ body, html {
     background: rgba(10, 8, 5, 0.94);
     display: flex; justify-content: center; align-items: center;
     z-index: 1000; 
-    font-family: 'Shippori Mincho', 'Georgia', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: #e8e0cc;
 }
 
@@ -113,10 +116,11 @@ body, html {
 }
 
 .box-istruzioni h2 {
-    font-family: 'Yuji Boku', serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
     color: #e8e0cc;
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
 }
 
@@ -125,6 +129,7 @@ body, html {
     border-top: 1px solid rgba(232, 224, 204, 0.1); 
     border-bottom: 1px solid rgba(232, 224, 204, 0.1);
     padding: 15px 0;
+    font-size: 0.95rem;
 }
 
 #btn-inizio {
@@ -132,10 +137,10 @@ body, html {
     color: #e8e0cc;
     border: 1px solid #a33030;
     padding: 10px 30px;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 0px;
     cursor: pointer;
-    font-family: 'Shippori Mincho', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     transition: all 0.2s ease;
 }
 
