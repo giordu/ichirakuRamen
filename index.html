@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Il mio Negozio di Ramen 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="webgl-canvas"></canvas>
+
+    <script src="utils/m4.js"></script>
+    <script src="utils/glm_utils.js"></script>
+    <script src="utils/mesh_utils.js"></script>
+    <script src="utils/dat.gui.js"></script>
+
+    <script src="js/audio.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/mesh_loaders.js"></script>
+    <script src="js/gui.js"></script>
+    <script src="js/shaders.js"></script>
+    <script src="js/main.js"></script>
+
+    <div id="overlay-istruzioni">
+        <div class="box-istruzioni">
+            <h2>Benvenuto nel Vicolo del Ramen!</h2>
+            <p>Esplora l'ambiente 3D e interagisci con la scena.</p>
+            
+            <hr>
+            
+            <ul class="lista-comandi">
+                <li><strong>Esplorazione:</strong> Muovi la telecamera usando il mouse, il touch (da telefono) o i tasti <strong>W, A, S, D</strong>.</li>
+                <li><strong>Distributore automatico:</strong> Utilizza la gui per comprare una bibita fresca alla macchinetta!</li>
+                <li><strong>Musica:</strong> Usa il riproduttore audio (player) sullo schermo per far partire la radio.</li>
+            </ul>
+            
+            <button id="btn-inizio">ENTRA NEL VICOLO</button>
+        </div>
+    </div>
+
+    <div id="vending-popup" class="neon-popup">
+        <div class="popup-text">
+            <h3>DISTRIBUTORE AUTOMATICO</h3>
+            <p>Hai acquistato una bevanda fresca!</p>
+        </div>
+    </div>
+
+    <div id="music-player">
+        <div class="player-info">
+            <span id="track-title">Radio Spenta</span>
+        </div>
+        <div class="player-controls">
+            <button onclick="avviaRadio('japan_1')" title="Traccia 1">Japan 1</button>
+            <button onclick="avviaRadio('japan_2')" title="Traccia 2">Japan 2</button>
+            <button onclick="avviaRadio('spenta')" class="btn-stop" title="Spegni">Stop</button>
+        </div>
+    </div>
+</body>
+</html>

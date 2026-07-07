@@ -1,0 +1,173 @@
+# Blender 5.1.2 MTL File: 'ramen_shop.blend'
+# www.blender.org
+
+newmtl LIGHTS
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd lightstex.png
+map_d lightstex.png
+map_Bump -bm 1.000000 lightsbump.png
+
+newmtl Materiale.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd IMG_8426.png
+
+newmtl ROOF
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DIORAMAROOFtex.png
+map_d DIORAMAROOFtex.png
+map_Bump -bm 1.000000 DIORAMAROOFnormal.png
+
+newmtl Walls
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd walls1tex.png
+map_d walls1tex.png
+map_Bump -bm 1.000000 walls1bump.png
+
+newmtl aiStandardSurface1
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.926533 0.774625 0.454138
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl aiStandardSurface2
+Ns 640.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.272727 0.017918 0.000000
+Ni 1.500000
+illum 2
+map_Kd Diorama2texture.png
+map_d Diorama2texture.png
+
+newmtl blinn1
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd Diorama2texture.png
+map_d Diorama2texture.png
+map_Bump -bm 1.000000 Diorama2bump.png
+
+newmtl blinn4
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd diarama_assets1TEX.png
+map_d diarama_assets1TEX.png
+map_Bump -bm 1.000000 diarama_assets1bump.png
+
+newmtl blinn5
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DIarama3textures1.png
+map_d DIarama3textures1.png
+map_Bump -bm 1.000000 DIarama3bump.png
+
+newmtl blinn6
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DiaramaPropstexture.png
+map_d DiaramaPropstexture.png
+map_Bump -bm 1.000000 DiaramaPropsbump.png
+
+newmtl blinn8
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd dIARMAASSETS2TEX.png
+map_d dIARMAASSETS2TEX.png
+map_Bump -bm 1.000000 dIARMAASSETS2bump.png
+
+newmtl blinn9
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DIARAMASHLEFPROPStex.png
+map_d DIARAMASHLEFPROPStex.png
+map_Bump -bm 1.000000 DIARAMASHLEFPROPbump.png
+
+newmtl la_mia_foto
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd IMG_4967.png
+
+newmtl pasted__blinn6
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DiaramaPropstexture.png
+map_d DiaramaPropstexture.png
+map_Bump -bm 1.000000 DiaramaPropsbump.png
+
+newmtl pasted__blinn8
+Ns 63.117920
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd DIarama3textures1.png
+map_d DIarama3textures1.png
+map_Bump -bm 1.000000 DIarama3bump.png
+
+newmtl standardSurface1
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.400000 0.400000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
