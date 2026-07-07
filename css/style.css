@@ -6,16 +6,16 @@ body, html {
 
 .neon-popup {
     position: absolute;
-    bottom: 10%; left: 50%;
+    bottom: 12%; left: 50%;
     transform: translate(-50%, 20px);
-    background: #3e382a;
-    border: 3px solid #1a1510; 
-    outline: 1px solid #5a4e3d;
-    outline-offset: -5px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9); 
+    background: rgba(20, 16, 12, 0.85); 
+    backdrop-filter: blur(4px);
+    border-left: 4px solid #a33030;
+    border-top: none; border-right: none; border-bottom: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); 
     color: #e8e0cc;
     padding: 15px 25px;
-    border-radius: 2px;
+    border-radius: 0px;
     display: flex; align-items: center; gap: 15px;
     font-family: 'Shippori Mincho', 'Georgia', serif; 
     opacity: 0; pointer-events: none;
@@ -30,9 +30,8 @@ body, html {
 .popup-text h3 {
     margin: 0; font-size: 1.1rem;
     font-family: 'Yuji Boku', 'Shippori Mincho', serif;
-    color: #cc4444;
+    color: #e8e0cc;
     letter-spacing: 1px;
-    border-bottom: 1px solid #5a4e3d;
     padding-bottom: 3px;
 }
 
@@ -40,13 +39,13 @@ body, html {
 
 #music-player {
     position: fixed; bottom: 20px; right: 20px;
-    background: #3e382a;
-    border: 3px solid #1a1510; 
-    outline: 1px solid #5a4e3d;
-    outline-offset: -5px;
-    border-radius: 2px;
+    background: rgba(20, 16, 12, 0.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(232, 224, 204, 0.15);
+    border-top: 3px solid #a33030;
+    border-radius: 0px;
     padding: 14px 18px;
-    box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     font-family: 'Shippori Mincho', 'Georgia', serif;
     color: #e8e0cc;
     z-index: 999;
@@ -55,10 +54,10 @@ body, html {
 }
 
 .player-info {
-    font-family: 'Yuji Boku', 'Shippori Mincho', serif;
-    font-size: 14px; font-weight: bold;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 12px; font-weight: bold;
     color: #cc4444; 
-    border-bottom: 1px solid #5a4e3d;
+    letter-spacing: 1px;
     padding-bottom: 4px; text-align: center;
 }
 
@@ -67,58 +66,79 @@ body, html {
 }
 
 .player-controls button {
-    background: #1a1510;
-    border: 1px solid #3a3028;
+    background: transparent;
+    border: 1px solid rgba(232, 224, 204, 0.3);
     color: #e8e0cc;
-    padding: 6px 12px;
-    border-radius: 2px;
+    padding: 6px 14px;
+    border-radius: 0px;
     cursor: pointer;
     font-family: 'Shippori Mincho', serif;
-    font-size: 12px;
+    font-size: 11px;
     transition: all 0.2s ease;
 }
 
-.player-controls button:hover { background: #3a3028; }
+.player-controls button:hover { 
+    background: #e8e0cc; 
+    color: #14100c;
+}
 
-.player-controls .btn-stop { background: #8b2222; border-color: #5a0000; }
+.player-controls .btn-stop { 
+    border-color: #a33030;
+    color: #ff6666;
+}
+
+.player-controls .btn-stop:hover {
+    background: #a33030;
+    color: #e8e0cc;
+}
 
 #overlay-istruzioni {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(10, 8, 5, 0.92);
+    background: rgba(10, 8, 5, 0.94);
     display: flex; justify-content: center; align-items: center;
-    z-index: 999; 
+    z-index: 1000; 
     font-family: 'Shippori Mincho', 'Georgia', serif;
     color: #e8e0cc;
 }
 
 .box-istruzioni {
-    background: #2a261e;
+    background: #1a1612;
     padding: 35px 40px;
-    border-radius: 2px;
-    border: 4px solid #1a1510; 
-    outline: 2px solid #5a4e3d;
-    outline-offset: -8px;
+    border-radius: 0px;
+    border: 1px solid rgba(232, 224, 204, 0.1);
+    border-top: 4px solid #a33030;
     text-align: center;
     max-width: 420px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
 }
 
 .box-istruzioni h2 {
-    color: #cc4444;
-    border-bottom: 2px solid #cc4444;
+    font-family: 'Yuji Boku', serif;
+    color: #e8e0cc;
+    margin-top: 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
-.lista-comandi { color: #e8e0cc; border-top: 1px dashed #5a4e3d; border-bottom: 1px dashed #5a4e3d; }
+.lista-comandi { 
+    color: #bbaaaa; 
+    border-top: 1px solid rgba(232, 224, 204, 0.1); 
+    border-bottom: 1px solid rgba(232, 224, 204, 0.1);
+    padding: 15px 0;
+}
 
 #btn-inizio {
-    background: #8b2222;
+    background: transparent;
     color: #e8e0cc;
-    border: 2px solid #5a0000;
-    padding: 12px 30px;
-    font-size: 17px;
-    border-radius: 2px;
+    border: 1px solid #a33030;
+    padding: 10px 30px;
+    font-size: 15px;
+    border-radius: 0px;
     cursor: pointer;
+    font-family: 'Shippori Mincho', serif;
     transition: all 0.2s ease;
 }
 
-#btn-inizio:hover { background: #a93030; }
+#btn-inizio:hover { 
+    background: #a33030;
+}
