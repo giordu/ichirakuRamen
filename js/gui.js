@@ -4,7 +4,6 @@
 let guiConfig = {
     isSmokeAnimationActive: true,      
     isLampLightOn: true,               
-    animateLights: false,
     acquistaBevanda: function() { acquistaBevandaAzione(); }, 
 };
 
