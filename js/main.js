@@ -280,8 +280,6 @@ function render() {
             if (group.triangles.length > 0) {
                 let smokeTex = loadedTextures.get("fumo.png");
                 if (smokeTex) { gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, smokeTex); gl.uniform1i(locations.uniforms.useTexture, 1); }
-                let fumoOpacita = (ora >= 19.0 || ora <= 5.0) ? 0.2 : 0.05;                
-                gl.uniform3f(locations.uniforms.materialColor, fumoOpacita, fumoOpacita, fumoOpacita);
 
                 let smokeMatrix = m4.identity();
                 smokeMatrix = m4.translate(smokeMatrix, 0.29, -0.2, 0.39); 
