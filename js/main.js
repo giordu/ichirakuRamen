@@ -68,7 +68,7 @@ function initWebGL() {
     loadModelPipeline("assets/models/pole_sign.obj", "pole_sign");
     loadModelPipeline("assets/models/ramen_sign.obj", "ramen_sign");
 
-    //caricamento texture del fumo
+    //caricamento texture del vapore
     let smokeTex = gl.createTexture();
     let smokeImg = new Image();
     smokeImg.src = "assets/textures/vapore/fumo.png"; 
@@ -95,8 +95,7 @@ function render() {
     smokeTimer += 0.005; 
 
     // gestione ciclo giorno notte
-    guiConfig.oraDelGiorno = (time * 0.5) % 24; 
-    let ora = guiConfig.oraDelGiorno;
+    let ora = (time * 0.5) % 24; 
     let intensitaSole = 1.0;
     let coloreSole = [1.0, 1.0, 1.0];     
     let coloreCielo = [0.5, 0.7, 0.9];    
@@ -124,7 +123,7 @@ function render() {
         if (t > 0.4) lampioneAccesoAdesso = false; 
     // fase 4: GIORNO
     } else {
-        intensitaSole = 2.0;
+        intensitaSole = 1.8;
         coloreSole = [1.0, 0.95, 0.9];
         coloreCielo = [0.4, 0.6, 0.85];
         lampioneAccesoAdesso = false;   
@@ -136,6 +135,7 @@ function render() {
     gl.clearColor(coloreCielo[0], coloreCielo[1], coloreCielo[2], 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
+    //meccanismo di sicurezza
     if (!gl || !shaderProgram || (shopVAO === null && lampVAO === null && benchVAO === null)) {
         requestAnimationFrame(render);
         return;
