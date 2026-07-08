@@ -187,6 +187,7 @@ function render() {
         });
     }
 
+    //LAMPIONE
     if (lampVAO !== null && lampMesh !== null) {
         gl.bindVertexArray(lampVAO);
         lampMesh.groups.forEach(group => {
@@ -203,6 +204,7 @@ function render() {
         });
     }
 
+    //PANCHINA
     if (benchVAO !== null && benchMesh !== null) {
         gl.bindVertexArray(benchVAO);
         benchMesh.groups.forEach(group => {
@@ -220,6 +222,7 @@ function render() {
         });
     }
 
+    //PALO INSEGNA
     if (poleSignVAO !== null && poleSignMesh !== null) {
         gl.bindVertexArray(poleSignVAO);
         poleSignMesh.groups.forEach(group => {
@@ -236,6 +239,7 @@ function render() {
         });
     }
 
+    //CARTELLONE INSEGNA
     if (ramenSignVAO !== null && ramenSignMesh !== null) {
         gl.bindVertexArray(ramenSignVAO);
         let oscillazione = Math.sin(time * 1.7) * 0.02;
@@ -254,6 +258,7 @@ function render() {
         });
     }
 
+    //DISTRIBUTORE AUTOMATICOß
     if (vendingVAO !== null && vendingMesh !== null) {
         gl.bindVertexArray(vendingVAO);
         vendingMesh.groups.forEach(group => {
@@ -268,7 +273,7 @@ function render() {
         });
     }
 
-    // TRANSPARENT GEOMETRY (SMOKE)
+    /* RENDERING OGGETTI TRASPARENTI (VAPORE) */
     if (guiConfig.isSmokeAnimationActive && smokeVAO !== null && smokeMesh !== null) {
         gl.enable(gl.BLEND); 
         gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
