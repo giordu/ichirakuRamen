@@ -1,9 +1,9 @@
 // camera.js: logica della camera e input utente
 
 /* COORDINATE SFERICHE*/
-let theta = -2.1; //angolo orizzontale      
+let theta = -2.3; //angolo orizzontale      
 let phi = 1.5; //angolo verticale
-let radius = 2.5; //raggio: distanza dalla camera al centro della camera
+let radius = 2.9; //raggio: distanza dalla camera al centro della camera
 
 /* MATRICI DA INVIARE ALO SHADER PER DISEGNARE LA SCENA 3D SUL MONITOR 2D*/
 let projectionMatrix; 
