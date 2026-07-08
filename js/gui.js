@@ -2,8 +2,6 @@
 
 /* CONFIGURAZIONE GUI*/
 let guiConfig = {
-    lightIntensity: 1.5,
-    lightColor: [255, 225, 190], 
     isSmokeAnimationActive: true,      
     isLampLightOn: true,               
     animateLights: false,
@@ -13,10 +11,6 @@ let guiConfig = {
 
 function setupUIControls() {
     const gui = new dat.GUI({ name: 'Controlli Ichiraku Diorama' });
-
-    const lightFolder = gui.addFolder('Illuminazione');
-    lightFolder.add(guiConfig, 'lightIntensity', 0.1, 5.0, 0.1).name('Intensità Sole');
-    lightFolder.addColor(guiConfig, 'lightColor').name('Colore Sole');
 
     const fxFolder = gui.addFolder('Effetti Speciali');
     fxFolder.add(guiConfig, 'isSmokeAnimationActive').name('Vapore Caldo'); 
