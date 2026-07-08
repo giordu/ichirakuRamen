@@ -145,7 +145,7 @@ void main() {
 
         float textureAlpha = (u_useTexture == 1) ? baseColor.a : 0.5;
     
-        float moltiplicatoreAlfa = (u_lightIntensity < 0.5) ? 0.7 : 0.3;
+        float moltiplicatoreAlfa = (u_lightIntensity < 0.5) ? 0.7 : 0.4;
 
         finalAlpha = textureAlpha * edgeFadeX * edgeFadeY * moltiplicatoreAlfa; 
 
