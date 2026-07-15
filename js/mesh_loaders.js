@@ -30,7 +30,7 @@ function loadModelPipeline(objUrl, type) {
                 mesh = objResult.mesh;
             }
 
-            Unitize(mesh);
+            Unitize(mesh); //standardizzazione dei modelli
 
             assignMesh(type, mesh)
 

@@ -167,7 +167,7 @@ function render() {
     //NEGOZIO DI RAMEN
     if (shopVAO !== null && shopMesh !== null) {
         gl.bindVertexArray(shopVAO); //dico alla gpu di prendere dalla memoria i triangoli di questo modello
-        gl.uniform1i(locations.uniforms.isSmoke, 0); 
+        gl.uniform1i(locations.uniforms.isSmoke, 0); //ad ogni fotogramma va spento!! --> webgl è una macchina a stati
         gl.uniform1f(locations.uniforms.smokeTime, time);
 
         shopMesh.groups.forEach(group => {

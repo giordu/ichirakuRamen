@@ -36,7 +36,7 @@ void main() {
     gl_Position = u_projection * u_view * worldPosition;
 
     v_position = worldPosition.xyz; 
-    v_normal = mat3(u_model) * a_normal;
+    v_normal = mat3(u_model) * a_normal; //normalizzazione iniziale
     v_surfaceToLight = u_lightPosition - worldPosition.xyz;
     v_surfaceToView = u_cameraPosition - worldPosition.xyz; 
     v_texcoord = a_texcoord;
@@ -70,7 +70,7 @@ uniform highp int u_isSmoke;
 out vec4 outColor;              
 
 void main() {
-    vec3 normal = normalize(v_normal);
+    vec3 normal = normalize(v_normal); //nuovamente normalizzo post interpolazione ( x PHONG SHADING)
     vec3 surfaceToViewDirection = normalize(v_surfaceToView);
 
     // ========================================================
@@ -83,8 +83,8 @@ void main() {
     vec3 diffuse = u_lightColor * diffuseLight * u_lightIntensity;
 
     float specularLight = 0.0;
-    if (diffuseLight > 0.0) {
-        specularLight = pow(max(dot(normal, halfVector), 0.0), 16.0); 
+    if (diffuseLight > 0.0) {//il pow definisce la lucentezza
+        specularLight = pow(max(dot(normal, halfVector), 0.0), 16.0); //prende l'angolo tra la normale e l'halfway vector. Più sono allineati più il riflesso acceca. 
     }
     vec3 specular = u_lightColor * specularLight * u_lightIntensity * 0.2;
 
@@ -97,13 +97,13 @@ void main() {
     float diffuseLightLamp = max(dot(normal, surfaceToLampDir), 0.0);
     
     float distanceToLamp = length(u_lampLightPosition - v_position);
-    float attenuation = 1.0 / (1.0 + 1.5 * distanceToLamp * distanceToLamp);
+    float attenuation = 1.0 / (1.0 + 1.5 * distanceToLamp * distanceToLamp); //essendo una luce puntiforme ha bisogno di attenuazione
 
     vec3 diffuseLamp = u_lampLightColor * diffuseLightLamp * attenuation * 2.5; 
 
     float specularLightLamp = 0.0;
-    if (diffuseLightLamp > 0.0) {
-        specularLightLamp = pow(max(dot(normal, halfVectorLamp), 0.0), 8.0); 
+    if (diffuseLightLamp > 0.0) { //il pow definisce la lucentezza
+        specularLightLamp = pow(max(dot(normal, halfVectorLamp), 0.0), 8.0); //prende l'angolo tra la normale e l'halfway vector. Più sono allineati più il riflesso acceca. 
     }
     vec3 specularLamp = u_lampLightColor * specularLightLamp * attenuation * 0.1;
 
@@ -147,7 +147,8 @@ void main() {
     
         float moltiplicatoreAlfa = (u_lightIntensity < 0.5) ? 0.7 : 0.4;
 
-        finalAlpha = textureAlpha * edgeFadeX * edgeFadeY * moltiplicatoreAlfa; 
+        //smusso matematicamente tramite i pixel dei bordi del quad
+        finalAlpha = textureAlpha * edgeFadeX * edgeFadeY * moltiplicatoreAlfa;
 
         if (u_lightIntensity < 0.5) {
             finalColor += vec3(0.05, 0.05, 0.05); 
