@@ -83,8 +83,8 @@ void main() {
     vec3 diffuse = u_lightColor * diffuseLight * u_lightIntensity;
 
     float specularLight = 0.0;
-    if (diffuseLight > 0.0) {//il pow definisce la lucentezza
-        specularLight = pow(max(dot(normal, halfVector), 0.0), 16.0); //prende l'angolo tra la normale e l'halfway vector. Più sono allineati più il riflesso acceca. 
+    if (diffuseLight > 0.0) {//il pow definisce la lucentezza, il max le ombre
+        specularLight = pow(max(dot(normal, halfVector), 0.0), 16.0); //prende l'angolo tra la normale e l'halfway vector.  
     }
     vec3 specular = u_lightColor * specularLight * u_lightIntensity * 0.2;
 
@@ -102,8 +102,8 @@ void main() {
     vec3 diffuseLamp = u_lampLightColor * diffuseLightLamp * attenuation * 2.5; 
 
     float specularLightLamp = 0.0;
-    if (diffuseLightLamp > 0.0) { //il pow definisce la lucentezza
-        specularLightLamp = pow(max(dot(normal, halfVectorLamp), 0.0), 8.0); //prende l'angolo tra la normale e l'halfway vector. Più sono allineati più il riflesso acceca. 
+    if (diffuseLightLamp > 0.0) { //il pow definisce la lucentezza, il max le ombre
+        specularLightLamp = pow(max(dot(normal, halfVectorLamp), 0.0), 8.0); //prende l'angolo tra la normale e l'halfway vector. 
     }
     vec3 specularLamp = u_lampLightColor * specularLightLamp * attenuation * 0.1;
 
